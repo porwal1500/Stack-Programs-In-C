@@ -30,3 +30,39 @@ void traverse()
         printf("\nSTACK is empty");
     	}
 }
+void pop()
+{
+	if(top<=-1)
+    	{
+       		printf("\nStack is Underflow");
+   	}
+    	else
+    	{
+        	printf("\t The deleted element is %d",stack[top]);
+        	top--;
+    	}
+}
+void main()
+{
+	int choice;
+	while(1)
+	{
+		printf("Select the operation :\n1). Push\n2). Pop\n3). Traverse\n4). Exit: ");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case 1: 
+				push();
+				break;
+			case 2: 
+				pop();
+				break;
+			case 3: 
+				traverse();
+				break;
+			case 4: 
+				exit(0);
+				break;
+		}
+	}	
+}
